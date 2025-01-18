@@ -95,7 +95,7 @@ For a clearer view of the ERD diagram, you can download the attached `.drawio` f
 ## Data Warehouse
 ### Data Modeling:
 - **Star Schema:**
-![DWH Schema]()
+![DWH Schema](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/DWH%20model/star_schema.jpg)
 
 ### Schema and Tables:
 #### Tables Overview:
