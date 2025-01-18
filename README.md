@@ -3,7 +3,7 @@
 ## OLTP Database: Gravity Bookstore
 
 Gravity Bookstore is an online transactional processing (OLTP) database designed for a fictional bookstore. It captures and manages detailed information about books, customers, and sales transactions. We will be utilizing this database for our project.
-You can find the database [Here][def]
+You can find the database
 
 ### Tables Description
 
@@ -86,7 +86,7 @@ You can find the database [Here][def]
 
 ### ERD
 
-We created this database in SQL Server Management Studio (SSMS). By correctly connecting the tables, we generated the following Entity-Relationship Diagram (ERD):
+We created this database in SQL Server Management Studio (SSMS). By correctly connecting the tables, we generated the following Entity-Relationship Diagram (ERD): (https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/Task%201/OLTP%20ERD/SSMS%20Screenshot.png)
 
 For a clearer view of the ERD diagram, you can download the attached `.drawio` file and open it on [this Website][def2].
 
