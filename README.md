@@ -91,4 +91,84 @@ We created this database in SQL Server Management Studio (SSMS). By correctly co
 For a clearer view of the ERD diagram, you can download the attached `.drawio` file and open it on [this Website][def2].
 
 [def]: https://github.com/bbrumm/databasestar/tree/main/sample_databases/sample_db_gravity/gravity_sqlserver
-[def2]: https://www.drawio.com/
+
+## Data Warehouse
+### Data Modeling:
+- **Star Schema:**
+![DWH Schema]()
+
+### Schema and Tables:
+#### Tables Overview:
+
+##### Fact_book Table:
+**Fields:**
+   - `order_id_SK` (Primary Key)
+   - `order_id` (Business Key)
+   - `book_id` (Foreign Key)
+   - `customer_id` (Foreign Key)
+   - `shipping_id` (Foreign Key)
+   - `date_id` (Foreign Key)
+   - `order_status`(dd)
+   - `order_status`(Foreign Key)
+   - `shipped_date`(Foreign Key)
+   - `delivery_date`(Foreign Key)
+   - `total price` (measure)
+   - `shipping_cost` (measure)
+   - `quantity_sold` (measure)
+
+
+##### Dim_shipping Table:
+ **Fields:**
+   - `shipping_SK` (Primary Key)
+   - `shipping_bk` (Business Key)
+   - `shipping_method`
+   - `start_date`
+   - `end_date`
+   - `is_current`
+
+##### Dim_Book Table:
+ **Fields:**
+   - `book_id_SK` (Primary Key)
+   - `book_id_BK` (Business Key)
+   - `isbn13`
+   - `title`
+   - `publication_date`
+   - `num_pages`
+   - `language_name`
+   - `publisher_name`
+   - `author_name`
+   - `price`
+   - `start_date`
+   - `end_date`
+   - `is_current`
+
+##### Dim_Customer Table:
+ **Fields:**
+   - `customer_id_SK` (Primary Key)
+   - `customer_id_BK` (Business Key)
+   - `first_name`
+   - `last_name`
+   - `email`
+   - `country`
+   - `street_name`
+   - `city`
+   - `address_status`
+   - `start_date`
+   - `end_date`
+   - `is_current`
+
+##### Dim_Date Table:
+ **Fields:**
+   - `date_Id_SK` (Primary Key)
+   - `year`
+   - `month`
+   - `day`
+   - `quarter`
+   - `dayofweek`
+
+
+#### Schema Architecture:
+
+- Each table is connected to the **Fact_book** table via foreign keys, forming a **star schema**.
+- The **Fact_book** table is positioned at the center, surrounded by dimension tables (**Dim_shipping, Dim_Book, Dim_Customer, Dim_Date**).
+- This star schema architecture facilitates efficient querying and data analysis, a common practice in Data Warehousing.
