@@ -10,7 +10,6 @@ CREATE TABLE dim_book
     isbn13 VARCHAR(13),
     num_pages INT,
     publication_date DATE,
-	price decimal(5,2),
 	language_code VARCHAR(8),
     language_name VARCHAR(50),
     publisher_name VARCHAR(400),
