@@ -86,7 +86,8 @@ You can find the database
 
 ### ERD
 
-We created this database in SQL Server Management Studio (SSMS). By correctly connecting the tables, we generated the following Entity-Relationship Diagram (ERD): (https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/Task%201/OLTP%20ERD/SSMS%20Screenshot.png)
+We created this database in SQL Server Management Studio (SSMS). By correctly connecting the tables, we generated the following Entity-Relationship Diagram (ERD): 
+![ERD Schema](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/ERD/OLTP%20ERD/SSMS%20Screenshot.png)
 
 For a clearer view of the ERD diagram, you can download the attached `.drawio` file and open it on [this Website][def2].
 
@@ -95,7 +96,7 @@ For a clearer view of the ERD diagram, you can download the attached `.drawio` f
 ## Data Warehouse
 ### Data Modeling:
 - **Star Schema:**
-![DWH Schema](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/DWH%20model/star_schema.jpg)
+![DWH Schema](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/DWH%20model/data_model.jpg)
 
 ### Schema and Tables:
 #### Tables Overview:
