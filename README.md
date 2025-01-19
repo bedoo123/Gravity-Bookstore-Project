@@ -134,7 +134,6 @@ For a clearer view of the ERD diagram, you can download the attached `.drawio` f
    - `language_name`
    - `publisher_name`
    - `author_name`
-   - `price`
    - `start_date`
    - `end_date`
    - `is_current`
