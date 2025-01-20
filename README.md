@@ -249,3 +249,101 @@ Storage efficiency is a critical concern, and you cannot tolerate redundancy.
 --------------------------------------------------------------------------------
 Conclusion:
 Your star schema is an excellent choice for a book sales analysis model. It provides the simplicity, performance, and flexibility needed for analytical workloads while supporting historical data tracking and scalability. However, be mindful of its limitations, such as potential data redundancy and challenges with complex relationships. By leveraging modern data warehouse technologies (e.g., columnar storage, partitioning, and indexing), you can further optimize the performance and scalability of your star schema.
+# ETL Project with SSIS - Data Warehouse Schema
+This project involves building an ETL pipeline using SQL Server Integration Services (SSIS) to populate and manage a data warehouse. The schema includes a Fact Table and several Dimension Tables to support analytics and reporting for book orders, shipping, and customer data.
+
+### Data Warehouse Schema
+### Fact_Book Table
+This table stores transactional data related to book orders.
+# Fields:
+order_id_SK (Primary Key)
+order_id (Business Key)
+book_id (Foreign Key)
+customer_id (Foreign Key)
+shipping_id (Foreign Key)
+date_id (Foreign Key)
+order_status (String, order status description)
+total_price (Measure, total cost of the order)
+shipping_cost (Measure, shipping cost for the order)
+quantity_sold (Measure, number of items sold)
+
+
+### Dim_Shipping Table
+This table contains details about shipping methods and their validity periods.
+
+Fields:
+shipping_SK (Primary Key)
+shipping_bk (Business Key)
+shipping_method (String, type of shipping method)
+start_date (Date, validity start date)
+end_date (Date, validity end date)
+is_current (Boolean, indicates if the method is currently valid)
+Dim_Book Table
+This table provides detailed information about books.
+
+
+### Dim_Book Table
+
+Fields:
+book_id_SK (Primary Key)
+book_id_BK (Business Key)
+isbn13 (String, book identifier)
+title (String, book title)
+publication_date (Date, publication date)
+num_pages (Integer, number of pages in the book)
+language_name (String, language of the book)
+publisher_name (String, name of the publisher)
+author_name (String, name of the author)
+start_date (Date, record validity start date)
+end_date (Date, record validity end date)
+is_current (Boolean, indicates if the record is currently valid)
+Dim_Customer Table
+This table captures customer information and their address details.
+
+
+
+### Dim_Customer Table
+Fields:
+customer_id_SK (Primary Key)
+customer_id_BK (Business Key)
+first_name (String, customer's first name)
+last_name (String, customer's last name)
+email (String, customer's email)
+country (String, customer's country)
+street_name (String, street name of the customer's address)
+city (String, city of the customer's address)
+address_status (String, address validity status)
+start_date (Date, record validity start date)
+end_date (Date, record validity end date)
+is_current (Boolean, indicates if the record is currently valid)
+Dim_Date Table
+This table supports time-based analytics by storing date-related information.
+
+
+## DimDate
+Fields:
+date_Id_SK (Primary Key)
+year (Integer, year component)
+month (Integer, month component)
+day (Integer, day component)
+quarter (Integer, quarter of the year)
+dayofweek (String, name of the day)
+Dim_Status Table
+This table provides information about the status of orders.
+
+
+
+## DimStatus
+Fields:
+status_SK (Primary Key)
+order_status_id (Business Key)
+order_status (String, status description)
+Features
+ETL Process: Uses SSIS to perform Extract, Transform, and Load operations.
+Schema Design: Implements a star schema with one fact table and multiple dimension tables for efficient querying.
+Data Accuracy: Ensures referential integrity through primary and foreign key relationships.
+Contributing
+Feel free to fork the repository and submit pull requests for improvements or suggestions.
+
+Let me know if you need any further modifications!
+
