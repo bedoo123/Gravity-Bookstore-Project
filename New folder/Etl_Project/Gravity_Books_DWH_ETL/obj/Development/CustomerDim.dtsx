@@ -1,43 +1,67 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="1/19/2025 3:59:14 PM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="DESKTOP-TTVAAC8"
   DTS:CreatorName="DESKTOP-TTVAAC8\Nehal-Ashraf"
-  DTS:DTSID="{1294C2C2-3889-47E8-8110-74D558AF359E}"
+  DTS:DTSID="{A58D97D4-1950-44BC-A2C3-1D2593B86206}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="16.0.5685.0"
   DTS:LocaleID="1033"
   DTS:ObjectName="Package1"
   DTS:PackageType="5"
-  DTS:VersionBuild="9"
-  DTS:VersionGUID="{C11E8ED1-860A-4759-8E5C-CA0EA2D186A4}">
+  DTS:VersionBuild="12"
+  DTS:VersionGUID="{A728173F-52D2-4810-B4E5-F642E548B4FF}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
     <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-GN2KD3S.GravityBook]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{F928F961-E66E-4A2A-B1E7-E7C8FF550CBA}"
+      DTS:ObjectName="DESKTOP-GN2KD3S.GravityBook">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-GN2KD3S;Initial Catalog=GravityBook;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{F928F961-E66E-4A2A-B1E7-E7C8FF550CBA}DESKTOP-GN2KD3S.GravityBook;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DESKTOP-GN2KD3S.Gravity_Books_DWH]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{4CE662D3-28F5-403F-8867-5D2C1B5C9B31}"
+      DTS:ObjectName="DESKTOP-GN2KD3S.Gravity_Books_DWH">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=DESKTOP-GN2KD3S;Initial Catalog=Gravity_Books_DWH;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{4CE662D3-28F5-403F-8867-5D2C1B5C9B31}DESKTOP-GN2KD3S.Gravity_Books_DWH;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[DESKTOP-TTVAAC8\MSSQLSERVER_EV.GravityBook]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{545041CA-DF8E-450E-9F3C-3215BCF08F18}"
+      DTS:DTSID="{2780144D-AD65-48AC-B55B-5ED653158D27}"
       DTS:ObjectName="DESKTOP-TTVAAC8\MSSQLSERVER_EV.GravityBook">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-TTVAAC8\MSSQLSERVER_EV;Initial Catalog=GravityBook;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{545041CA-DF8E-450E-9F3C-3215BCF08F18}DESKTOP-TTVAAC8\MSSQLSERVER_EV.GravityBook;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DESKTOP-TTVAAC8\MSSQLSERVER_EV;Initial Catalog=GravityBook;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{2780144D-AD65-48AC-B55B-5ED653158D27}DESKTOP-TTVAAC8\MSSQLSERVER_EV.GravityBook;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
       DTS:refId="Package.ConnectionManagers[DESKTOP-TTVAAC8\MSSQLSERVER_EV.project_datawarehouse]"
       DTS:CreationName="OLEDB"
-      DTS:DTSID="{EF2FBE0B-929C-4505-A30E-13EC7F4B4595}"
+      DTS:DTSID="{15D3358D-B277-4A72-9AFA-3D124B0B6272}"
       DTS:ObjectName="DESKTOP-TTVAAC8\MSSQLSERVER_EV.project_datawarehouse">
       <DTS:ObjectData>
         <DTS:ConnectionManager
           DTS:ConnectRetryCount="1"
           DTS:ConnectRetryInterval="5"
-          DTS:ConnectionString="Data Source=DESKTOP-TTVAAC8\MSSQLSERVER_EV;Initial Catalog=project_datawarehouse;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{EF2FBE0B-929C-4505-A30E-13EC7F4B4595}DESKTOP-TTVAAC8\MSSQLSERVER_EV.project_datawarehouse;Auto Translate=False;" />
+          DTS:ConnectionString="Data Source=DESKTOP-TTVAAC8\MSSQLSERVER_EV;Initial Catalog=project_datawarehouse;Provider=SQLOLEDB.1;Integrated Security=SSPI;Application Name=SSIS-Package1-{15D3358D-B277-4A72-9AFA-3D124B0B6272}DESKTOP-TTVAAC8\MSSQLSERVER_EV.project_datawarehouse;Auto Translate=False;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
   </DTS:ConnectionManagers>
@@ -47,7 +71,7 @@
       DTS:refId="Package\Data Flow Task"
       DTS:CreationName="Microsoft.Pipeline"
       DTS:Description="Data Flow Task"
-      DTS:DTSID="{9F2253D9-FB82-4A95-896F-F09ADCDFA144}"
+      DTS:DTSID="{F5999230-2642-4A3A-A206-27B234B2ACAF}"
       DTS:ExecutableType="Microsoft.Pipeline"
       DTS:LocaleID="-1"
       DTS:ObjectName="Data Flow Task"
@@ -221,7 +245,7 @@
                 <property
                   dataType="System.String"
                   description="Specifies the name of the database object used to open a rowset."
-                  name="OpenRowset">[dbo].[dim_customer]</property>
+                  name="OpenRowset">[dbo].[DimCust]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the variable that contains the name of the database object used to open a rowset."
@@ -264,8 +288,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Insert Destination.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-TTVAAC8\MSSQLSERVER_EV.project_datawarehouse]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-TTVAAC8\MSSQLSERVER_EV.project_datawarehouse]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-GN2KD3S.Gravity_Books_DWH]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-GN2KD3S.Gravity_Books_DWH]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -308,13 +332,29 @@
                       externalMetadataColumnId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[email]"
                       lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[email]" />
                     <inputColumn
-                      refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].Columns[address_status]"
+                      refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].Columns[country_name]"
                       cachedCodepage="1252"
                       cachedDataType="str"
-                      cachedLength="30"
-                      cachedName="address_status"
-                      externalMetadataColumnId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[address_status]"
-                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[address_status]" />
+                      cachedLength="200"
+                      cachedName="country_name"
+                      externalMetadataColumnId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[country_name]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[country_name]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].Columns[street_number]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="street_number"
+                      externalMetadataColumnId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[street_number]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[street_number]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].Columns[street_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="200"
+                      cachedName="street_name"
+                      externalMetadataColumnId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[street_name]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[street_name]" />
                     <inputColumn
                       refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].Columns[city]"
                       cachedCodepage="1252"
@@ -324,6 +364,14 @@
                       externalMetadataColumnId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[city]"
                       lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[city]" />
                     <inputColumn
+                      refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].Columns[address_status]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="30"
+                      cachedName="address_status"
+                      externalMetadataColumnId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[address_status]"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[address_status]" />
+                    <inputColumn
                       refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].Columns[start_date]"
                       cachedDataType="dbTimeStamp"
                       cachedName="start_date"
@@ -332,6 +380,10 @@
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[cust_sk]"
+                      dataType="i4"
+                      name="cust_sk" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_id]"
                       dataType="i4"
@@ -355,11 +407,23 @@
                       length="350"
                       name="email" />
                     <externalMetadataColumn
-                      refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[address_status]"
+                      refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[country_name]"
                       codePage="1252"
                       dataType="str"
-                      length="30"
-                      name="address_status" />
+                      length="200"
+                      name="country_name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[street_number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="street_number" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[street_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="street_name" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[city]"
                       codePage="1252"
@@ -367,19 +431,15 @@
                       length="100"
                       name="city" />
                     <externalMetadataColumn
+                      refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[address_status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="30"
+                      name="address_status" />
+                    <externalMetadataColumn
                       refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[start_date]"
                       dataType="dbTimeStamp"
                       name="start_date" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[customer_sk]"
-                      dataType="i4"
-                      name="customer_sk" />
-                    <externalMetadataColumn
-                      refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[country]"
-                      codePage="1252"
-                      dataType="str"
-                      length="200"
-                      name="country" />
                     <externalMetadataColumn
                       refId="Package\Data Flow Task\Insert Destination.Inputs[OLE DB Destination Input].ExternalColumns[end_date]"
                       dataType="dbTimeStamp"
@@ -434,7 +494,7 @@
                   description="The SQL command to be executed."
                   expressionType="Notify"
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[dim_customer] SET [end_date] = ? WHERE [customer_id] = ? AND [end_date] IS NULL</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">UPDATE [dbo].[DimCust] SET [end_date] = ?, [is_current] = 0 WHERE [customer_id] = ? AND [end_date] IS NULL</property>
                 <property
                   dataType="System.Int32"
                   description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -443,8 +503,8 @@
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Command.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-TTVAAC8\MSSQLSERVER_EV.project_datawarehouse]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-TTVAAC8\MSSQLSERVER_EV.project_datawarehouse]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-GN2KD3S.Gravity_Books_DWH]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-GN2KD3S.Gravity_Books_DWH]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -553,7 +613,7 @@
                   dataType="System.String"
                   description="The SQL command to be executed."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT        customer.customer_id AS customer_id , customer.first_name first_name, customer.last_name AS last_name, customer.email, address_status.address_status, address.city, country.country_name
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT        customer.customer_id, customer.first_name, customer.last_name, customer.email, address_status.address_status, address.city, country.country_name, address.street_name, address.street_number
 FROM            address INNER JOIN
                          customer_address ON address.address_id = customer_address.address_id INNER JOIN
                          address_status ON customer_address.status_id = address_status.status_id INNER JOIN
@@ -584,8 +644,8 @@ FROM            address INNER JOIN
               <connections>
                 <connection
                   refId="Package\Data Flow Task\OLE DB Source.Connections[OleDbConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-TTVAAC8\MSSQLSERVER_EV.GravityBook]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-TTVAAC8\MSSQLSERVER_EV.GravityBook]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-GN2KD3S.GravityBook]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-GN2KD3S.GravityBook]"
                   description="The OLE DB runtime connection used to access the database."
                   name="OleDbConnection" />
               </connections>
@@ -669,6 +729,28 @@ FROM            address INNER JOIN
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[last_name]"
                       name="last_name"
                       truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[street_name]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[street_name]"
+                      length="200"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[street_name]"
+                      name="street_name"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[street_number]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[street_number]"
+                      length="10"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[street_number]"
+                      name="street_number"
+                      truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -712,6 +794,18 @@ FROM            address INNER JOIN
                       dataType="str"
                       length="200"
                       name="last_name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[street_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      name="street_name" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].ExternalColumns[street_number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      name="street_number" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -767,6 +861,20 @@ FROM            address INNER JOIN
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[country_name]"
                       name="country_name" />
                     <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[street_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[street_name]"
+                      name="street_name" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[street_number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[street_number]"
+                      name="street_number" />
+                    <outputColumn
                       refId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
                       lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
@@ -795,7 +903,7 @@ FROM            address INNER JOIN
                   dataType="System.String"
                   description="Specifies the SELECT statement used to create a schema rowset."
                   name="SqlCommand"
-                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [city], [customer_id],[start_date],[end_date] FROM [dbo].[dim_customer]</property>
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">SELECT [city], [customer_id],[start_date],[end_date] FROM [dbo].[DimCust]</property>
                 <property
                   dataType="System.String"
                   description="Specifies the WHERE clause in the SELECT statement that selects the current row among rows with identical business keys."
@@ -833,8 +941,8 @@ FROM            address INNER JOIN
               <connections>
                 <connection
                   refId="Package\Data Flow Task\Slowly Changing Dimension.Connections[LookupConnection]"
-                  connectionManagerID="Package.ConnectionManagers[DESKTOP-TTVAAC8\MSSQLSERVER_EV.project_datawarehouse]"
-                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-TTVAAC8\MSSQLSERVER_EV.project_datawarehouse]"
+                  connectionManagerID="Package.ConnectionManagers[DESKTOP-GN2KD3S.Gravity_Books_DWH]"
+                  connectionManagerRefId="Package.ConnectionManagers[DESKTOP-GN2KD3S.Gravity_Books_DWH]"
                   description="Defines the connection to use for lookups in the dimension table"
                   name="LookupConnection" />
               </connections>
@@ -1061,6 +1169,36 @@ FROM            address INNER JOIN
                           name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[last_name]}</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[street_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="200"
+                      cachedName="street_name"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[street_name]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[street_name]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 1].Columns[street_number]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="street_number"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[street_number]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[street_number]}</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1172,6 +1310,36 @@ FROM            address INNER JOIN
                           name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[last_name]}</property>
                       </properties>
                     </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[street_name]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="200"
+                      cachedName="street_name"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[street_name]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[street_name]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Data Flow Task\Union All.Inputs[Union All Input 2].Columns[street_number]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="street_number"
+                      lineageId="Package\Data Flow Task\OLE DB Source.Outputs[OLE DB Source Output].Columns[street_number]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[street_number]}</property>
+                      </properties>
+                    </inputColumn>
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -1235,6 +1403,20 @@ FROM            address INNER JOIN
                       length="200"
                       lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[last_name]"
                       name="last_name" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[street_name]"
+                      codePage="1252"
+                      dataType="str"
+                      length="200"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[street_name]"
+                      name="street_name" />
+                    <outputColumn
+                      refId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[street_number]"
+                      codePage="1252"
+                      dataType="str"
+                      length="10"
+                      lineageId="Package\Data Flow Task\Union All.Outputs[Union All Output 1].Columns[street_number]"
+                      name="street_number" />
                   </outputColumns>
                   <externalMetadataColumns />
                 </output>
@@ -1307,55 +1489,13 @@ FROM            address INNER JOIN
       <GraphLayout
         Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="121,42"
-          Id="Package\Data Flow Task\Union All"
-          TopLeft="172,413.5" />
-        <NodeLayout
-          Size="163,42"
-          Id="Package\Data Flow Task\Derived Column 1"
-          TopLeft="151,515.5" />
-        <NodeLayout
-          Size="163,42"
-          Id="Package\Data Flow Task\Insert Destination"
-          TopLeft="151,617.5" />
-        <NodeLayout
           Size="209,42"
           Id="Package\Data Flow Task\Slowly Changing Dimension"
           TopLeft="128,107.5" />
         <NodeLayout
-          Size="166,42"
-          Id="Package\Data Flow Task\OLE DB Command"
-          TopLeft="5.50000000000003,311.5" />
-        <NodeLayout
           Size="150,42"
           Id="Package\Data Flow Task\OLE DB Source"
           TopLeft="157.5,5.5" />
-        <NodeLayout
-          Size="154,42"
-          Id="Package\Data Flow Task\Derived Column"
-          TopLeft="17.5,209.5" />
-        <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Union All Output 1]"
-          TopLeft="232.5,455.5">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,60"
-              Start="0,0"
-              End="0,52.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,52.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[OLE DB Source Output]"
           TopLeft="232.5,47.5">
@@ -1378,32 +1518,64 @@ FROM            address INNER JOIN
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="154,42"
+          Id="Package\Data Flow Task\Derived Column"
+          TopLeft="17.5,209.5" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[OLE DB Command Output]"
-          TopLeft="88.5,353.5">
+          Id="Package\Data Flow Task.Paths[Historical Attribute Inserts Output]"
+          TopLeft="199,149.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="125.166666666667,60"
+              EndConnector="-104.5,60"
               Start="0,0"
-              End="125.166666666667,52.5">
+              End="-104.5,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,31.5301794453507" />
+                    End="0,20.2735042735043" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,31.5301794453507"
-                    Point2="0,35.5301794453507"
-                    Point3="4,35.5301794453507" />
+                    Point1="0,20.2735042735043"
+                    Point2="0,24.2735042735043"
+                    Point3="-4,24.2735042735043" />
                   <mssgle:LineSegment
-                    End="121.166666666667,35.5301794453507" />
+                    End="-100.5,24.2735042735043" />
                   <mssgle:CubicBezierSegment
-                    Point1="121.166666666667,35.5301794453507"
-                    Point2="125.166666666667,35.5301794453507"
-                    Point3="125.166666666667,39.5301794453507" />
+                    Point1="-100.5,24.2735042735043"
+                    Point2="-104.5,24.2735042735043"
+                    Point3="-104.5,28.2735042735043" />
                   <mssgle:LineSegment
-                    End="125.166666666667,52.5" />
+                    End="-104.5,52.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-127.30638671875,29.2735042735043,150.1127734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="166,42"
+          Id="Package\Data Flow Task\OLE DB Command"
+          TopLeft="5.50000000000003,311.5" />
+        <EdgeLayout
+          Id="Package\Data Flow Task.Paths[Derived Column Output]"
+          TopLeft="91.5,251.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,60"
+              Start="0,0"
+              End="0,52.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -1412,6 +1584,10 @@ FROM            address INNER JOIN
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="121,42"
+          Id="Package\Data Flow Task\Union All"
+          TopLeft="172,413.5" />
         <EdgeLayout
           Id="Package\Data Flow Task.Paths[New Output]"
           TopLeft="266,149.5">
@@ -1449,44 +1625,46 @@ FROM            address INNER JOIN
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Historical Attribute Inserts Output]"
-          TopLeft="199,149.5">
+          Id="Package\Data Flow Task.Paths[OLE DB Command Output]"
+          TopLeft="88.5,353.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-104.5,60"
+              EndConnector="125.166666666667,60"
               Start="0,0"
-              End="-104.5,52.5">
+              End="125.166666666667,52.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.2735042735043" />
+                    End="0,31.5301794453507" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,20.2735042735043"
-                    Point2="0,24.2735042735043"
-                    Point3="-4,24.2735042735043" />
+                    Point1="0,31.5301794453507"
+                    Point2="0,35.5301794453507"
+                    Point3="4,35.5301794453507" />
                   <mssgle:LineSegment
-                    End="-100.5,24.2735042735043" />
+                    End="121.166666666667,35.5301794453507" />
                   <mssgle:CubicBezierSegment
-                    Point1="-100.5,24.2735042735043"
-                    Point2="-104.5,24.2735042735043"
-                    Point3="-104.5,28.2735042735043" />
+                    Point1="121.166666666667,35.5301794453507"
+                    Point2="125.166666666667,35.5301794453507"
+                    Point3="125.166666666667,39.5301794453507" />
                   <mssgle:LineSegment
-                    End="-104.5,52.5" />
+                    End="125.166666666667,52.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-127.30638671875,29.2735042735043,150.1127734375,11.609375"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Data Flow Task\Derived Column 1"
+          TopLeft="151,515.5" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Derived Column Output1]"
-          TopLeft="232.5,557.5">
+          Id="Package\Data Flow Task.Paths[Union All Output 1]"
+          TopLeft="232.5,455.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1506,9 +1684,13 @@ FROM            address INNER JOIN
             <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
+        <NodeLayout
+          Size="163,42"
+          Id="Package\Data Flow Task\Insert Destination"
+          TopLeft="151,617.5" />
         <EdgeLayout
-          Id="Package\Data Flow Task.Paths[Derived Column Output]"
-          TopLeft="91.5,251.5">
+          Id="Package\Data Flow Task.Paths[Derived Column Output1]"
+          TopLeft="232.5,557.5">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
@@ -1532,19 +1714,6 @@ FROM            address INNER JOIN
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\Data Flow Task\Insert Destination">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\Data Flow Task\Slowly Changing Dimension">
     <Properties>
       <Property>
@@ -1552,8 +1721,8 @@ FROM            address INNER JOIN
         <Value
           type="q2:string">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SCDWizardMetadata xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"&gt;
-  &lt;ConnectionID&gt;{EF2FBE0B-929C-4505-A30E-13EC7F4B4595}&lt;/ConnectionID&gt;
-  &lt;TableName&gt;[dbo].[dim_customer]&lt;/TableName&gt;
+  &lt;ConnectionID&gt;{4CE662D3-28F5-403F-8867-5D2C1B5C9B31}&lt;/ConnectionID&gt;
+  &lt;TableName&gt;[dbo].[DimCust]&lt;/TableName&gt;
   &lt;InputToColumnsCollection&gt;
     &lt;InputColumnToDBColumn&gt;
       &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[address_status]&lt;/IdentificationString&gt;
@@ -1566,6 +1735,12 @@ FROM            address INNER JOIN
       &lt;ColumnName&gt;city&lt;/ColumnName&gt;
       &lt;KeyType&gt;None&lt;/KeyType&gt;
       &lt;ChangeType&gt;HistoricalAttribute&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[country_name]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;country_name&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
     &lt;/InputColumnToDBColumn&gt;
     &lt;InputColumnToDBColumn&gt;
       &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[customer_id]&lt;/IdentificationString&gt;
@@ -1588,6 +1763,18 @@ FROM            address INNER JOIN
     &lt;InputColumnToDBColumn&gt;
       &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[last_name]&lt;/IdentificationString&gt;
       &lt;ColumnName&gt;last_name&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[street_name]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;street_name&lt;/ColumnName&gt;
+      &lt;KeyType&gt;None&lt;/KeyType&gt;
+      &lt;ChangeType&gt;None&lt;/ChangeType&gt;
+    &lt;/InputColumnToDBColumn&gt;
+    &lt;InputColumnToDBColumn&gt;
+      &lt;IdentificationString&gt;OLE DB Source.Outputs[OLE DB Source Output].Columns[street_number]&lt;/IdentificationString&gt;
+      &lt;ColumnName&gt;street_number&lt;/ColumnName&gt;
       &lt;KeyType&gt;None&lt;/KeyType&gt;
       &lt;ChangeType&gt;None&lt;/ChangeType&gt;
     &lt;/InputColumnToDBColumn&gt;
@@ -1619,6 +1806,19 @@ FROM            address INNER JOIN
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task\Insert Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
