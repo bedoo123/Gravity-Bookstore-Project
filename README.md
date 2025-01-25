@@ -89,7 +89,7 @@ You can find the database
 We created this database in SQL Server Management Studio (SSMS). By correctly connecting the tables, we generated the following Entity-Relationship Diagram (ERD): 
 ![ERD Schema](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/ERD/OLTP%20ERD/SSMS%20Screenshot.png)
 
-For a clearer view of the ERD diagram, you can download the attached `.drawio` file and open it on [this Website][def2].
+For a clearer view of the ERD diagram, you can download the attached `.drawio` file and open it on [](https://app.diagrams.net)][def2].
 
 [def]: https://github.com/bbrumm/databasestar/tree/main/sample_databases/sample_db_gravity/gravity_sqlserver
 
@@ -338,7 +338,7 @@ Below are the images of the Power BI reports created for this project:
 ![Sales Performance Overview](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/Reports%26Dashboard/Sales%20Performance%20Overview.PNG)
 
 ### Books Analysis
-![Books Analysis]([Books_Analysis.PNG](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/Reports%26Dashboard/Books%20Analysis.PNG))
+![Books Analysis](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/Reports%26Dashboard/Books%20Analysis.PNG)
 
 ### Publisher Analysis
 ![Publisher Analysis](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/Reports%26Dashboard/Publisher%20Analysis.PNG)
