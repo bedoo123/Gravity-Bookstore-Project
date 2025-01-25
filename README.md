@@ -89,7 +89,7 @@ You can find the database
 We created this database in SQL Server Management Studio (SSMS). By correctly connecting the tables, we generated the following Entity-Relationship Diagram (ERD): 
 ![ERD Schema](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/ERD/OLTP%20ERD/SSMS%20Screenshot.png)
 
-For a clearer view of the ERD diagram, you can download the attached `.drawio` file and open it on [this Website][def2].
+For a clearer view of the ERD diagram, you can download the attached `.drawio` file and open it on [https://app.diagrams.net](https://app.diagrams.net).
 
 [def]: https://github.com/bbrumm/databasestar/tree/main/sample_databases/sample_db_gravity/gravity_sqlserver
 
@@ -255,27 +255,28 @@ This project involves building an ETL pipeline using SQL Server Integration Serv
 ### Data Warehouse Schema
 ### Fact_Book Table
 This table stores transactional data related to book orders.
-
-
+![DWH Fact_Book_Sales_Table](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/Screenshot%20(448).png)
+![](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/Screenshot%20(449).png)
+![](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/Screenshot%20(450).png)
 
 # Fields:
 
-
-
 ### Dim_Shipping Table
-
+![DWH Dim_Shipping Table](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/Screenshot%20(444).png)
+![](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/Screenshot%20(445).png)
 
 ### Dim_Book Table
-
+![DWH_Dim_Book Table](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/Screenshot%20(440).png)
+![DWH_Dim_Book Table](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/Screenshot%20(441).png)
 
 ### Dim_Customer Table
-
+![DWH Dim_Customer Table](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/Screenshot%20(442).png)
+![DWH Dim_Customer Table](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/Screenshot%20(443).png)
 
 ## DimDate
-
-
+Created Using SQL SERVER QUERIES
 ## DimStatus
-
+![DWH DimStatus](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/Screenshot%20(446).png)
 
 
 --------------------------------------------------------------------------------
@@ -297,6 +298,10 @@ In this project, I used SQL Server Analysis Services (SSAS) in Tabular Mode to b
 - `Total Due by No. of Orders`
 
 Below is an image showing the measures created in the Tabular Model for reference:
+
+![DWH SSAS](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSAS/WhatsApp%20Image%202025-01-25%20at%204.33.53%20PM.jpeg)
+![DWH SSAS](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSAS/WhatsApp%20Image%202025-01-25%20at%204.35.37%20PM.jpeg)
+![DWH SSAS](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSAS/WhatsApp%20Image%202025-01-25%20at%204.35.49%20PM.jpeg)
 
 3. **Data Sources::** The data source used for this SSAS tabular model is an SQL Server database connected to the Gravity_Books_DWH dataset. 
 
@@ -330,16 +335,16 @@ The data used in this project is sourced from SSAS Tabular Model For Gravity_Boo
 Below are the images of the Power BI reports created for this project:
 
 ### Sales Performance Overview
-![Sales Performance Overview](Sales_Performance_Overview.PNG)
+![Sales Performance Overview](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/Reports%26Dashboard/Sales%20Performance%20Overview.PNG)
 
 ### Books Analysis
-![Books Analysis](Books_Analysis.PNG)
+![Books Analysis](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/Reports%26Dashboard/Books%20Analysis.PNG)
 
 ### Publisher Analysis
-![Publisher Analysis](Publisher_Analysis.PNG)
+![Publisher Analysis](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/Reports%26Dashboard/Publisher%20Analysis.PNG)
 
 ### Customer Segmentation Overview
-![Customer Segmentation Overview](Customer_Segmentation_Overview.PNG)
+![Customer Segmentation Overview](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/Reports%26Dashboard/Customer%20Segmentation%20Overview.PNG)
 
 ## Visualizations
 - **Sales Performance**: Line graphs showing sales trends over time.
