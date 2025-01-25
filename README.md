@@ -89,7 +89,7 @@ You can find the database
 We created this database in SQL Server Management Studio (SSMS). By correctly connecting the tables, we generated the following Entity-Relationship Diagram (ERD): 
 ![ERD Schema](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/ERD/OLTP%20ERD/SSMS%20Screenshot.png)
 
-For a clearer view of the ERD diagram, you can download the attached `.drawio` file and open it on [](https://app.diagrams.net)][def2].
+For a clearer view of the ERD diagram, you can download the attached `.drawio` file and open it on [https://app.diagrams.net](https://app.diagrams.net).
 
 [def]: https://github.com/bbrumm/databasestar/tree/main/sample_databases/sample_db_gravity/gravity_sqlserver
 
