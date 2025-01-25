@@ -89,7 +89,7 @@ You can find the database
 We created this database in SQL Server Management Studio (SSMS). By correctly connecting the tables, we generated the following Entity-Relationship Diagram (ERD): 
 ![ERD Schema](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/ERD/OLTP%20ERD/SSMS%20Screenshot.png)
 
-For a clearer view of the ERD diagram, you can download the attached `.drawio` file and open it on [this Website][def2].
+For a clearer view of the ERD diagram, you can download the attached `.drawio` file and open it on [https://app.diagrams.net](https://app.diagrams.net).
 
 [def]: https://github.com/bbrumm/databasestar/tree/main/sample_databases/sample_db_gravity/gravity_sqlserver
 
@@ -255,95 +255,110 @@ This project involves building an ETL pipeline using SQL Server Integration Serv
 ### Data Warehouse Schema
 ### Fact_Book Table
 This table stores transactional data related to book orders.
-# Fields:
-order_id_SK (Primary Key)
-order_id (Business Key)
-book_id (Foreign Key)
-customer_id (Foreign Key)
-shipping_id (Foreign Key)
-date_id (Foreign Key)
-order_status (String, order status description)
-total_price (Measure, total cost of the order)
-shipping_cost (Measure, shipping cost for the order)
-quantity_sold (Measure, number of items sold)
+![DWH Fact_Book_Sales_Table](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/Screenshot%20(448).png)
+![](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/Screenshot%20(449).png)
+![](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/Screenshot%20(450).png)
 
+# Fields:
 
 ### Dim_Shipping Table
-This table contains details about shipping methods and their validity periods.
-
-Fields:
-shipping_SK (Primary Key)
-shipping_bk (Business Key)
-shipping_method (String, type of shipping method)
-start_date (Date, validity start date)
-end_date (Date, validity end date)
-is_current (Boolean, indicates if the method is currently valid)
-Dim_Book Table
-This table provides detailed information about books.
-
+![DWH Dim_Shipping Table](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/Screenshot%20(444).png)
+![](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/Screenshot%20(445).png)
 
 ### Dim_Book Table
-
-Fields:
-book_id_SK (Primary Key)
-book_id_BK (Business Key)
-isbn13 (String, book identifier)
-title (String, book title)
-publication_date (Date, publication date)
-num_pages (Integer, number of pages in the book)
-language_name (String, language of the book)
-publisher_name (String, name of the publisher)
-author_name (String, name of the author)
-start_date (Date, record validity start date)
-end_date (Date, record validity end date)
-is_current (Boolean, indicates if the record is currently valid)
-Dim_Customer Table
-This table captures customer information and their address details.
-
-
+![DWH_Dim_Book Table](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/Screenshot%20(440).png)
+![DWH_Dim_Book Table](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/Screenshot%20(441).png)
 
 ### Dim_Customer Table
-Fields:
-customer_id_SK (Primary Key)
-customer_id_BK (Business Key)
-first_name (String, customer's first name)
-last_name (String, customer's last name)
-email (String, customer's email)
-country (String, customer's country)
-street_name (String, street name of the customer's address)
-city (String, city of the customer's address)
-address_status (String, address validity status)
-start_date (Date, record validity start date)
-end_date (Date, record validity end date)
-is_current (Boolean, indicates if the record is currently valid)
-Dim_Date Table
-This table supports time-based analytics by storing date-related information.
-
+![DWH Dim_Customer Table](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/Screenshot%20(442).png)
+![DWH Dim_Customer Table](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/Screenshot%20(443).png)
 
 ## DimDate
-Fields:
-date_Id_SK (Primary Key)
-year (Integer, year component)
-month (Integer, month component)
-day (Integer, day component)
-quarter (Integer, quarter of the year)
-dayofweek (String, name of the day)
-Dim_Status Table
-This table provides information about the status of orders.
-
-
-
+Created Using SQL SERVER QUERIES
 ## DimStatus
-Fields:
-status_SK (Primary Key)
-order_status_id (Business Key)
-order_status (String, status description)
-Features
-ETL Process: Uses SSIS to perform Extract, Transform, and Load operations.
-Schema Design: Implements a star schema with one fact table and multiple dimension tables for efficient querying.
-Data Accuracy: Ensures referential integrity through primary and foreign key relationships.
-Contributing
-Feel free to fork the repository and submit pull requests for improvements or suggestions.
+![DWH DimStatus](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/Screenshot%20(446).png)
 
-Let me know if you need any further modifications!
 
+--------------------------------------------------------------------------------
+# SSAS Tabular Model for Data Warehouse
+In this project, I used SQL Server Analysis Services (SSAS) in Tabular Mode to build a semantic model for the data warehouse. Below are the key steps involved:
+
+1. **Data Model Structure: :** The data warehouse consists of a star schema with fact and dimension tables. The central fact table FactBookSales stores transactional data, while the dimension tables (DimBooks, DimCust, DimDate, DimShipping, DimStatus) provide descriptive information for different entities.
+
+2. **Key Measures Created: :** Several important measures were developed using DAX (Data Analysis Expressions) to provide insights into the data:
+
+- `No. of Books Sold`
+- `No. of Customers`
+- `No. of Orders`
+- `No. of Publishers`
+- `Total Due`
+- `Total Freight`
+- `Total Tax`
+- `Total Subtotal`
+- `Total Due by No. of Orders`
+
+Below is an image showing the measures created in the Tabular Model for reference:
+
+![DWH SSAS](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSAS/WhatsApp%20Image%202025-01-25%20at%204.33.53%20PM.jpeg)
+![DWH SSAS](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSAS/WhatsApp%20Image%202025-01-25%20at%204.35.37%20PM.jpeg)
+![DWH SSAS](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSAS/WhatsApp%20Image%202025-01-25%20at%204.35.49%20PM.jpeg)
+
+3. **Data Sources::** The data source used for this SSAS tabular model is an SQL Server database connected to the Gravity_Books_DWH dataset. 
+
+4. **Visualization::** The Tabular Model Explorer showcases the structure of the model, relationships between tables, and measures used to provide key insights. 
+
+By leveraging SSAS Tabular, I was able to create a fast, scalable model that enables multidimensional analysis and reporting. 
+
+--------------------------------------------------------------------------------
+# Book Sales Analysis Using Power BI
+
+## Overview
+This project analyzes book sales data to derive insights into sales performance, customer segmentation, and publisher analysis. The goal is to identify key trends and provide actionable insights for improving sales strategies.
+
+## Data Sources
+The data used in this project is sourced from SSAS Tabular Model For Gravity_Books_DWH.
+
+## Methodology
+1. **Data Cleaning**: The raw data was cleaned to handle missing values and inconsistencies.
+2. **Data Processing**: The data was processed to create meaningful metrics such as total sales, number of orders, and customer segmentation.
+3. **SSAS Tabular Model**: A SQL Server Analysis Services (SSAS) Tabular Model was created to facilitate advanced data analysis and provide a robust framework for generating insights.
+4. **Data Visualization**: Power BI was used to create interactive dashboards and visualizations, leveraging the SSAS Tabular Model for enhanced performance and deeper insights.
+
+## Key Insights
+- **Top Authors**: Barbaba Yusash and Johannes Mirrora are among the top authors by total sales.
+- **Top Publishers**: Penguin Books and Vintage are leading publishers by total sales.
+- **Customer Segmentation**: The majority of customers are from Afghanistan and Albania.
+- **Advanced Insights**: Utilizing the SSAS Tabular Model, we identified key trends such as seasonal sales patterns and high-performing regions.
+
+
+## Power BI Reports
+Below are the images of the Power BI reports created for this project:
+
+### Sales Performance Overview
+![Sales Performance Overview](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/Reports%26Dashboard/Sales%20Performance%20Overview.PNG)
+
+### Books Analysis
+![Books Analysis](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/Reports%26Dashboard/Books%20Analysis.PNG)
+
+### Publisher Analysis
+![Publisher Analysis](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/Reports%26Dashboard/Publisher%20Analysis.PNG)
+
+### Customer Segmentation Overview
+![Customer Segmentation Overview](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/Reports%26Dashboard/Customer%20Segmentation%20Overview.PNG)
+
+## Visualizations
+- **Sales Performance**: Line graphs showing sales trends over time.
+- **Customer Segmentation**: Pie charts showing the distribution of customers by region.
+- **Publisher Analysis**: Bar charts comparing the performance of different publishers.
+- **Advanced Metrics**: Dashboards incorporating DAX calculations and time intelligence functions from the SSAS Tabular Model.
+
+## How to Use
+To replicate this analysis, follow these steps:
+1. Clone the repository.
+2. Install the necessary dependencies.
+3. Run the data processing scripts.
+4. Deploy the SSAS Tabular Model using SQL Server Data Tools (SSDT).
+5. Open the Power BI file and connect it to the SSAS Tabular Model to view the visualizations.
+
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or suggestions.
