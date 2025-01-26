@@ -343,7 +343,7 @@ Below are the images of the Power BI reports created for this project:
 
 ## Visualizations
 - **Sales Performance**: Line graphs showing sales trends over time.
-- **Customer Segmentation**: Pie charts showing the distribution of customers by region.
+- **Customer Segmentation**: Pie and graphs charts showing the distribution of customers by region.
 - **Publisher Analysis**: Bar charts comparing the performance of different publishers.
 - **Advanced Metrics**: Dashboards incorporating DAX calculations and time intelligence functions from the SSAS Tabular Model.
 
