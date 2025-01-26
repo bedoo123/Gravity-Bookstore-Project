@@ -255,28 +255,23 @@ This project involves building an ETL pipeline using SQL Server Integration Serv
 ### Data Warehouse Schema
 ### Fact_Book Table
 This table stores transactional data related to book orders.
-![DWH Fact_Book_Sales_Table](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/Screenshot%20(448).png)
-![](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/Screenshot%20(449).png)
-![](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/Screenshot%20(450).png)
+![DWH Fact_Book_Sales_Table](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/Fact%20Table.PNG)
 
 # Fields:
 
 ### Dim_Shipping Table
-![DWH Dim_Shipping Table](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/Screenshot%20(444).png)
-![](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/Screenshot%20(445).png)
+![DWH Dim_Shipping Table](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/DimShippingMethod.PNG)
 
 ### Dim_Book Table
-![DWH_Dim_Book Table](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/Screenshot%20(440).png)
-![DWH_Dim_Book Table](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/Screenshot%20(441).png)
+![DWH_Dim_Book Table](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/DimBooks.PNG)
 
 ### Dim_Customer Table
-![DWH Dim_Customer Table](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/Screenshot%20(442).png)
-![DWH Dim_Customer Table](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/Screenshot%20(443).png)
+![DWH Dim_Customer Table](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/DimCustomer.PNG)
 
 ## DimDate
 Created Using SQL SERVER QUERIES
 ## DimStatus
-![DWH DimStatus](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/Screenshot%20(446).png)
+![DWH DimStatus](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSIS/DimStatus.PNG)
 
 
 --------------------------------------------------------------------------------
@@ -299,9 +294,9 @@ In this project, I used SQL Server Analysis Services (SSAS) in Tabular Mode to b
 
 Below is an image showing the measures created in the Tabular Model for reference:
 
-![DWH SSAS](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSAS/WhatsApp%20Image%202025-01-25%20at%204.33.53%20PM.jpeg)
-![DWH SSAS](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSAS/WhatsApp%20Image%202025-01-25%20at%204.35.37%20PM.jpeg)
-![DWH SSAS](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSAS/WhatsApp%20Image%202025-01-25%20at%204.35.49%20PM.jpeg)
+![DWH SSAS](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSAS/Measures%20in%20fact%20table.PNG)
+![DWH SSAS](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSAS/DWH%20Model.jpeg)
+![DWH SSAS](https://github.com/KhalidEltaweel/Gravity-Bookstore-Project/blob/main/SSAS/Model%20With%20Measure.jpeg)
 
 3. **Data Sources::** The data source used for this SSAS tabular model is an SQL Server database connected to the Gravity_Books_DWH dataset. 
 
